@@ -55,4 +55,4 @@ def main():
         database.close()
 
 
-if name == '__main__': main()
+if __name__ == '__main__': main()
