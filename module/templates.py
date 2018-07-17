@@ -13,7 +13,8 @@ def replacement(match):
     code = match.group(1)
     try:
         return str(eval(code, scope))
-    except SyntaxError:
+    except (NameError, SyntaxError):
+        exec(code, scope)
         return ''
 
 
@@ -22,5 +23,4 @@ for line in fileinput.input():
     lines.append(line)
 
 text = ''.join(lines)
-
 print(field_pat.sub(replacement, text))
