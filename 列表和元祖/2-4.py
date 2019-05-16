@@ -6,11 +6,13 @@ database = [
     ['xiaoxiaohao', '2121'],
 ]
 
-username = raw_input('User name: ')
-pin = raw_input('Pin code: ')
+print(database)
 
-if [username, pin] in database:
-    print '允许访问'
-else:
-    print '禁止访问'
+# username = raw_input('User name: ')
+# pin = raw_input('Pin code: ')
+#
+# if [username, pin] in database:
+#     print('允许访问')
+# else:
+#     print('禁止访问')
 
